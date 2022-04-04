@@ -1,33 +1,33 @@
-# egg_base
+## 介绍
 
-egg_base
+基于egg基础模版
 
-## QuickStart
+<br />
 
-<!-- add docs here for user -->
+## 快速开始
 
-see [egg docs][egg] for more detail.
-
-### Development
+#### 安装依赖
 
 ```bash
-$ npm i
-$ npm run dev
-$ open http://localhost:7001/
+# cnpm install
+npm install
 ```
 
-### Deploy
+#### 运行
 
 ```bash
-$ npm start
-$ npm stop
+npm run dev
+
+# open http://localhost:7001
 ```
 
-### npm scripts
+<br />
 
-- Use `npm run lint` to check code style.
-- Use `npm test` to run unit test.
-- Use `npm run autod` to auto detect dependencies upgrade, see [autod](https://www.npmjs.com/package/autod) for more detail.
+## 插件列表
 
+| 插件名称          | 描述             |
+| ----------------- | ---------------- |
+| egg-cors          | 【插件】配置跨域 |
+| egg-validate-plus | 【插件】校验参数 |
+| egg-router-group  | 【插件】路由分组 |
 
-[egg]: https://eggjs.org
