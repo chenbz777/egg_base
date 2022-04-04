@@ -10,6 +10,11 @@ module.exports = () => {
     try {
       await next();
 
+      if (ctx.status === 400) {
+        const { error } = ctx.body;
+        ctx.body = ctx.result.resultInfo('parameter_verification_error', error);
+      }
+
       if (ctx.status === 404) {
         ctx.body = ctx.result.resultInfo('404');
       }

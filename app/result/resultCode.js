@@ -22,7 +22,7 @@ const resultCode = {
   },
   parameter_verification_error: {
     code: 7006,
-    msg: '参数校验错误',
+    msg: '参数错误',
   },
   no_user: {
     code: 7007,

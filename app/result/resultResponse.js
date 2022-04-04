@@ -20,10 +20,10 @@ const success = (data = '') => {
  * @author chenbingze
  * @date 2022/3/10
  */
-const resultInfo = info => {
+const resultInfo = (info, data) => {
   if (resultCode[info]) {
     const { code, msg } = resultCode[info];
-    return result(code, msg);
+    return result(code, msg, data);
   }
   return result(500, '服务器内部错误');
 

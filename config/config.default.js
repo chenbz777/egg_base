@@ -36,19 +36,6 @@ module.exports = appInfo => {
     allowMethods: 'GET, PUT,  POST, DELETE, PATCH',
   };
 
-  // 【插件】参数校验plus
-  config.resolveError = (ctx, errors) => {
-    if (errors.length) {
-      ctx.type = 'json';
-      ctx.status = 400;
-      ctx.body = {
-        code: 400,
-        error: errors,
-        message: '参数错误',
-      };
-    }
-  };
-
   return {
     ...config,
     ...userConfig,
