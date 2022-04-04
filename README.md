@@ -9,7 +9,7 @@
 #### 安装依赖
 
 ```bash
-# cnpm install
+# 推荐cnpm
 npm install
 ```
 
