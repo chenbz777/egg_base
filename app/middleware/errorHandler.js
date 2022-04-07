@@ -10,17 +10,18 @@ module.exports = () => {
     try {
       await next();
 
+      // 参数校验错误
       if (ctx.status === 400) {
         const { error } = ctx.body;
         ctx.body = ctx.result.resultInfo('parameter_verification_error', error);
       }
 
+      // 访问路径错误
       if (ctx.status === 404) {
         ctx.body = ctx.result.resultInfo('404');
       }
 
     } catch (err) {
-
       const { app } = ctx;
 
       // 所有的异常都在 app 上触发一个 error 事件，框架会记录一条错误日志

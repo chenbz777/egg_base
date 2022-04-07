@@ -2,6 +2,16 @@
 
 const { resultCode } = require('./resultCode');
 
+/**
+ * @description 返回格式
+ * @param code {number} - 状态码
+ * @param msg {string} - 描述
+ * @param data {string} - 数据
+ * @param data {object} - 数据
+ * @param data {array} - 数据
+ * @author chenbingze
+ * @date 2022/4/7
+ */
 const result = (code = 0, msg = 'ok', data) => {
   return {
     code,
@@ -10,6 +20,14 @@ const result = (code = 0, msg = 'ok', data) => {
   };
 };
 
+/**
+ * @description 成功
+ * @param data {string} - 数据
+ * @param data {Object} - 数据
+ * @param data {array} - 数据
+ * @author chenbingze
+ * @date 2022/4/7
+ */
 const success = (data = '') => {
   return result(200, '成功', data);
 };
